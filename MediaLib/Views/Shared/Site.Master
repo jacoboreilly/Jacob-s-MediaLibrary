@@ -1,0 +1,81 @@
+﻿<%@ Master Language="C#" Inherits="System.Web.Mvc.ViewMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title><asp:ContentPlaceHolder ID="TitleContent" runat="server" /></title>
+    <link href="<%= ResolveUrl("~/Content/Site.css") %>" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="<%= ResolveUrl("~/jquery-ui/js/jquery.js") %>""></script>
+    <script type="text/javascript" src="<%= ResolveUrl("~/js/jquery.osmplayer.compressed.js") %>"></script>
+    <!-- Uncomment the following to debug. -->
+    <!--
+    <script type="text/javascript" src="js/source/jquery.media.drupal.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.parser.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.auto.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.rpc.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.json.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.sha256.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.utils.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.control.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.flash.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.html5.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.image.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.link.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.links.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.display.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.minplayer.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.menu.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.node.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.pager.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.player.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.playlist.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.playlistlink.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.rotator.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.slider.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.teaser.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.titlebar.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.scroll.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.voter.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.youtube.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.vimeo.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.dailymotion.js?P"></script>
+    <script type="text/javascript" src="js/source/jquery.media.file.js?P"></script>
+    -->
+    <script type="text/javascript" src="<%= ResolveUrl("~/templates/default/jquery.media.template.default.compressed.js") %>"></script>
+    <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/jquery-ui/css/dark-hive/jquery-ui-1.8rc1.custom.css") %>" />
+    <link rel="stylesheet" type="text/css" href="<%= ResolveUrl("~/templates/default/osmplayer_default.css") %>" />
+</head>
+
+<body>
+    <div class="page">
+
+        <div id="header">
+
+            <div class="logo">
+                <img src="<%= ResolveUrl("~/Content/logo2.png") %>" width="176" height="90" alt="Logo" />
+            </div>
+
+            <div id="title">
+                <h1><asp:ContentPlaceHolder ID="TitleContentHeader" runat="server" /></h1>
+            </div>
+
+            <div id="menucontainer">
+                <ul id="menu">              
+                    <li><%: Html.ActionLink("Home", "Index", "Home")%></li>
+                    <li><%: Html.ActionLink("About", "About", "Home")%></li>
+                </ul>
+            </div>
+
+            <div class="spacer">&nbsp;</div>
+              
+        </div>
+
+        <div id="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+
+            <div id="footer">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

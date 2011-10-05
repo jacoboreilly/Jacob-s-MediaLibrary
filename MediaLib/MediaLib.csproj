@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DB8D5E1D-C8CC-4E82-BAF6-F43B166C4FE5}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MediaLib</RootNamespace>
+    <AssemblyName>MediaLib</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LibraryController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryProvider.cs" />
+    <Compile Include="Models\LibraryFolder.cs" />
+    <Compile Include="Models\MediaItem.cs" />
+    <Compile Include="Model\playlist.cs" />
+    <Compile Include="Model\track.cs" />
+    <Compile Include="PlaylistHandler.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\logo.png" />
+    <Content Include="Content\logo2.png" />
+    <Content Include="Content\noart.png" />
+    <Content Include="Content\noart2.png" />
+    <Content Include="Content\sound.png" />
+    <Content Include="Content\video.png" />
+    <Content Include="Global.asax" />
+    <Content Include="jquery-ui\css\dark-hive\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="jquery-ui\css\dark-hive\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="jquery-ui\css\dark-hive\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="jquery-ui\css\dark-hive\images\ui-bg_highlight-hard_20_0972a5_1x100.png" />
+    <Content Include="jquery-ui\css\dark-hive\images\ui-bg_highlight-soft_33_003147_1x100.png" />
+    <Content Include="jquery-ui\css\dark-hive\images\ui-bg_highlight-soft_35_222222_1x100.png" />
+    <Content Include="jquery-ui\css\dark-hive\images\ui-bg_highlight-soft_44_444444_1x100.png" />
+    <Content Include="jquery-ui\css\dark-hive\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="jquery-ui\css\dark-hive\images\ui-bg_loop_25_000000_21x21.png" />
+    <Content Include="jquery-ui\css\dark-hive\images\ui-icons_222222_256x240.png" />
+    <Content Include="jquery-ui\css\dark-hive\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="jquery-ui\css\dark-hive\images\ui-icons_a83300_256x240.png" />
+    <Content Include="jquery-ui\css\dark-hive\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="jquery-ui\css\dark-hive\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="jquery-ui\css\dark-hive\jquery-ui-1.8rc1.custom.css" />
+    <Content Include="jquery-ui\css\eggplant\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jquery-ui\css\eggplant\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="jquery-ui\css\eggplant\images\ui-bg_flat_55_994d53_40x100.png" />
+    <Content Include="jquery-ui\css\eggplant\images\ui-bg_flat_55_fafafa_40x100.png" />
+    <Content Include="jquery-ui\css\eggplant\images\ui-bg_gloss-wave_30_3d3644_500x100.png" />
+    <Content Include="jquery-ui\css\eggplant\images\ui-bg_highlight-soft_100_dcd9de_1x100.png" />
+    <Content Include="jquery-ui\css\eggplant\images\ui-bg_highlight-soft_100_eae6ea_1x100.png" />
+    <Content Include="jquery-ui\css\eggplant\images\ui-bg_highlight-soft_25_30273a_1x100.png" />
+    <Content Include="jquery-ui\css\eggplant\images\ui-bg_highlight-soft_45_5f5964_1x100.png" />
+    <Content Include="jquery-ui\css\eggplant\images\ui-icons_454545_256x240.png" />
+    <Content Include="jquery-ui\css\eggplant\images\ui-icons_734d99_256x240.png" />
+    <Content Include="jquery-ui\css\eggplant\images\ui-icons_8d78a5_256x240.png" />
+    <Content Include="jquery-ui\css\eggplant\images\ui-icons_a8a3ae_256x240.png" />
+    <Content Include="jquery-ui\css\eggplant\images\ui-icons_ebccce_256x240.png" />
+    <Content Include="jquery-ui\css\eggplant\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="jquery-ui\css\eggplant\jquery-ui-1.8rc1.custom.css" />
+    <Content Include="jquery-ui\css\mint-choc\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jquery-ui\css\mint-choc\images\ui-bg_glass_15_5f391b_1x400.png" />
+    <Content Include="jquery-ui\css\mint-choc\images\ui-bg_gloss-wave_20_1c160d_500x100.png" />
+    <Content Include="jquery-ui\css\mint-choc\images\ui-bg_gloss-wave_25_453326_500x100.png" />
+    <Content Include="jquery-ui\css\mint-choc\images\ui-bg_gloss-wave_30_44372c_500x100.png" />
+    <Content Include="jquery-ui\css\mint-choc\images\ui-bg_highlight-soft_20_201913_1x100.png" />
+    <Content Include="jquery-ui\css\mint-choc\images\ui-bg_highlight-soft_20_619226_1x100.png" />
+    <Content Include="jquery-ui\css\mint-choc\images\ui-bg_inset-soft_10_201913_1x100.png" />
+    <Content Include="jquery-ui\css\mint-choc\images\ui-icons_222222_256x240.png" />
+    <Content Include="jquery-ui\css\mint-choc\images\ui-icons_9bcc60_256x240.png" />
+    <Content Include="jquery-ui\css\mint-choc\images\ui-icons_add978_256x240.png" />
+    <Content Include="jquery-ui\css\mint-choc\images\ui-icons_e3ddc9_256x240.png" />
+    <Content Include="jquery-ui\css\mint-choc\images\ui-icons_f1fd86_256x240.png" />
+    <Content Include="jquery-ui\css\mint-choc\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="jquery-ui\css\mint-choc\jquery-ui-1.8rc1.custom.css" />
+    <Content Include="jquery-ui\css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="jquery-ui\css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="jquery-ui\css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="jquery-ui\css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="jquery-ui\css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="jquery-ui\css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="jquery-ui\css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="jquery-ui\css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="jquery-ui\css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="jquery-ui\css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="jquery-ui\css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="jquery-ui\css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="jquery-ui\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="jquery-ui\css\smoothness\jquery-ui-1.8rc1.custom.css" />
+    <Content Include="jquery-ui\css\swanky-purse\images\ui-bg_diamond_10_4f4221_10x8.png" />
+    <Content Include="jquery-ui\css\swanky-purse\images\ui-bg_diamond_20_372806_10x8.png" />
+    <Content Include="jquery-ui\css\swanky-purse\images\ui-bg_diamond_25_675423_10x8.png" />
+    <Content Include="jquery-ui\css\swanky-purse\images\ui-bg_diamond_25_d5ac5d_10x8.png" />
+    <Content Include="jquery-ui\css\swanky-purse\images\ui-bg_diamond_8_261803_10x8.png" />
+    <Content Include="jquery-ui\css\swanky-purse\images\ui-bg_diamond_8_443113_10x8.png" />
+    <Content Include="jquery-ui\css\swanky-purse\images\ui-bg_flat_75_ddd4b0_40x100.png" />
+    <Content Include="jquery-ui\css\swanky-purse\images\ui-bg_highlight-hard_65_fee4bd_1x100.png" />
+    <Content Include="jquery-ui\css\swanky-purse\images\ui-icons_070603_256x240.png" />
+    <Content Include="jquery-ui\css\swanky-purse\images\ui-icons_e8e2b5_256x240.png" />
+    <Content Include="jquery-ui\css\swanky-purse\images\ui-icons_e9cd86_256x240.png" />
+    <Content Include="jquery-ui\css\swanky-purse\images\ui-icons_efec9f_256x240.png" />
+    <Content Include="jquery-ui\css\swanky-purse\images\ui-icons_f2ec64_256x240.png" />
+    <Content Include="jquery-ui\css\swanky-purse\images\ui-icons_f9f2bd_256x240.png" />
+    <Content Include="jquery-ui\css\swanky-purse\images\ui-icons_ff7519_256x240.png" />
+    <Content Include="jquery-ui\css\swanky-purse\jquery-ui-1.8rc1.custom.css" />
+    <Content Include="jquery-ui\css\ui-darkness\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="jquery-ui\css\ui-darkness\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="jquery-ui\css\ui-darkness\images\ui-bg_glass_20_555555_1x400.png" />
+    <Content Include="jquery-ui\css\ui-darkness\images\ui-bg_glass_40_0078a3_1x400.png" />
+    <Content Include="jquery-ui\css\ui-darkness\images\ui-bg_glass_40_ffc73d_1x400.png" />
+    <Content Include="jquery-ui\css\ui-darkness\images\ui-bg_gloss-wave_25_333333_500x100.png" />
+    <Content Include="jquery-ui\css\ui-darkness\images\ui-bg_highlight-soft_80_eeeeee_1x100.png" />
+    <Content Include="jquery-ui\css\ui-darkness\images\ui-bg_inset-soft_25_000000_1x100.png" />
+    <Content Include="jquery-ui\css\ui-darkness\images\ui-bg_inset-soft_30_f58400_1x100.png" />
+    <Content Include="jquery-ui\css\ui-darkness\images\ui-icons_222222_256x240.png" />
+    <Content Include="jquery-ui\css\ui-darkness\images\ui-icons_4b8e0b_256x240.png" />
+    <Content Include="jquery-ui\css\ui-darkness\images\ui-icons_a83300_256x240.png" />
+    <Content Include="jquery-ui\css\ui-darkness\images\ui-icons_cccccc_256x240.png" />
+    <Content Include="jquery-ui\css\ui-darkness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="jquery-ui\css\ui-darkness\jquery-ui-1.8rc1.custom.css" />
+    <Content Include="jquery-ui\js\jquery.js" />
+    <Content Include="js\compressed\jquery.media.auto.js" />
+    <Content Include="js\compressed\jquery.media.control.js" />
+    <Content Include="js\compressed\jquery.media.dailymotion.js" />
+    <Content Include="js\compressed\jquery.media.display.js" />
+    <Content Include="js\compressed\jquery.media.drupal.js" />
+    <Content Include="js\compressed\jquery.media.file.js" />
+    <Content Include="js\compressed\jquery.media.flash.js" />
+    <Content Include="js\compressed\jquery.media.html5.js" />
+    <Content Include="js\compressed\jquery.media.image.js" />
+    <Content Include="js\compressed\jquery.media.json.js" />
+    <Content Include="js\compressed\jquery.media.link.js" />
+    <Content Include="js\compressed\jquery.media.links.js" />
+    <Content Include="js\compressed\jquery.media.menu.js" />
+    <Content Include="js\compressed\jquery.media.minplayer.js" />
+    <Content Include="js\compressed\jquery.media.mousewheel.js" />
+    <Content Include="js\compressed\jquery.media.node.js" />
+    <Content Include="js\compressed\jquery.media.pager.js" />
+    <Content Include="js\compressed\jquery.media.parser.js" />
+    <Content Include="js\compressed\jquery.media.player.js" />
+    <Content Include="js\compressed\jquery.media.playlist.js" />
+    <Content Include="js\compressed\jquery.media.playlistlink.js" />
+    <Content Include="js\compressed\jquery.media.rotator.js" />
+    <Content Include="js\compressed\jquery.media.rpc.js" />
+    <Content Include="js\compressed\jquery.media.scroll.js" />
+    <Content Include="js\compressed\jquery.media.sha256.js" />
+    <Content Include="js\compressed\jquery.media.slider.js" />
+    <Content Include="js\compressed\jquery.media.teaser.js" />
+    <Content Include="js\compressed\jquery.media.titlebar.js" />
+    <Content Include="js\compressed\jquery.media.utils.js" />
+    <Content Include="js\compressed\jquery.media.vimeo.js" />
+    <Content Include="js\compressed\jquery.media.voter.js" />
+    <Content Include="js\compressed\jquery.media.youtube.js" />
+    <Content Include="js\createJS.inc" />
+    <Content Include="js\jquery.minplayer.compressed.js" />
+    <Content Include="js\jquery.minplayer.js" />
+    <Content Include="js\jquery.osmplayer.compressed.js" />
+    <Content Include="js\jquery.osmplayer.js" />
+    <Content Include="js\myfunctions.inc" />
+    <Content Include="js\source\jquery.media.auto.js" />
+    <Content Include="js\source\jquery.media.control.js" />
+    <Content Include="js\source\jquery.media.dailymotion.js" />
+    <Content Include="js\source\jquery.media.display.js" />
+    <Content Include="js\source\jquery.media.drupal.js" />
+    <Content Include="js\source\jquery.media.file.js" />
+    <Content Include="js\source\jquery.media.flash.js" />
+    <Content Include="js\source\jquery.media.html5.js" />
+    <Content Include="js\source\jquery.media.image.js" />
+    <Content Include="js\source\jquery.media.json.js" />
+    <Content Include="js\source\jquery.media.link.js" />
+    <Content Include="js\source\jquery.media.links.js" />
+    <Content Include="js\source\jquery.media.menu.js" />
+    <Content Include="js\source\jquery.media.minplayer.js" />
+    <Content Include="js\source\jquery.media.mousewheel.js" />
+    <Content Include="js\source\jquery.media.node.js" />
+    <Content Include="js\source\jquery.media.pager.js" />
+    <Content Include="js\source\jquery.media.parser.js" />
+    <Content Include="js\source\jquery.media.player.js" />
+    <Content Include="js\source\jquery.media.playlist.js" />
+    <Content Include="js\source\jquery.media.playlistlink.js" />
+    <Content Include="js\source\jquery.media.rotator.js" />
+    <Content Include="js\source\jquery.media.rpc.js" />
+    <Content Include="js\source\jquery.media.scroll.js" />
+    <Content Include="js\source\jquery.media.sha256.js" />
+    <Content Include="js\source\jquery.media.slider.js" />
+    <Content Include="js\source\jquery.media.teaser.js" />
+    <Content Include="js\source\jquery.media.titlebar.js" />
+    <Content Include="js\source\jquery.media.utils.js" />
+    <Content Include="js\source\jquery.media.vimeo.js" />
+    <Content Include="js\source\jquery.media.voter.js" />
+    <Content Include="js\source\jquery.media.youtube.js" />
+    <Content Include="js\yuicompressor\build\yuicompressor.jar" />
+    <Content Include="templates\default\images\busy.gif" />
+    <Content Include="templates\default\images\mask.png" />
+    <Content Include="templates\default\images\play.png" />
+    <Content Include="templates\default\jquery.media.template.api.js.js" />
+    <Content Include="templates\default\jquery.media.template.default.compressed.js" />
+    <Content Include="templates\default\jquery.media.template.default.js" />
+    <Content Include="templates\default\osmplayer_default.css" />
+    <Content Include="templates\default\osmplayer_default_ie.css" />
+    <Content Include="templates\default\playlist.xml" />
+    <Content Include="templates\shockplayer\css\shockplayer.css" />
+    <Content Include="templates\shockplayer\images\arrow_back.png" />
+    <Content Include="templates\shockplayer\images\arrow_back_hover.png" />
+    <Content Include="templates\shockplayer\images\arrow_forward.png" />
+    <Content Include="templates\shockplayer\images\arrow_forward_hover.png" />
+    <Content Include="templates\shockplayer\images\busy.gif" />
+    <Content Include="templates\shockplayer\images\mask.png" />
+    <Content Include="templates\shockplayer\images\mediafront_audioslidebarbg.png" />
+    <Content Include="templates\shockplayer\images\mediafront_back.png" />
+    <Content Include="templates\shockplayer\images\mediafront_bigplay.png" />
+    <Content Include="templates\shockplayer\images\mediafront_black40.png" />
+    <Content Include="templates\shockplayer\images\mediafront_blue20.png" />
+    <Content Include="templates\shockplayer\images\mediafront_buttonaudioslidebar.png" />
+    <Content Include="templates\shockplayer\images\mediafront_buttoncontroler.png" />
+    <Content Include="templates\shockplayer\images\mediafront_buttoninfo.png" />
+    <Content Include="templates\shockplayer\images\mediafront_buttonpause.png" />
+    <Content Include="templates\shockplayer\images\mediafront_buttonplay.png" />
+    <Content Include="templates\shockplayer\images\mediafront_buttonresizescreen.png" />
+    <Content Include="templates\shockplayer\images\mediafront_buttonsound.png" />
+    <Content Include="templates\shockplayer\images\mediafront_close.png" />
+    <Content Include="templates\shockplayer\images\mediafront_controlerbarBg.png" />
+    <Content Include="templates\shockplayer\images\mediafront_forward.png" />
+    <Content Include="templates\shockplayer\images\mediafront_infobox.png" />
+    <Content Include="templates\shockplayer\images\mediafront_logo.png" />
+    <Content Include="templates\shockplayer\images\mediafront_movie640x360.png" />
+    <Content Include="templates\shockplayer\images\mediafront_moviethumb.png" />
+    <Content Include="templates\shockplayer\images\mediafront_playlistbg.png" />
+    <Content Include="templates\shockplayer\images\mediafront_playlistshadow.png" />
+    <Content Include="templates\shockplayer\images\mediafront_playlisttitlebg.png" />
+    <Content Include="templates\shockplayer\jquery.media.template.shockplayer.js" />
+    <Content Include="templates\simpleblack\css\simpleblack.css" />
+    <Content Include="templates\simpleblack\images\busy.gif" />
+    <Content Include="templates\simpleblack\images\mask.png" />
+    <Content Include="templates\simpleblack\images\mediafront_audioslidebarbg.png" />
+    <Content Include="templates\simpleblack\images\mediafront_back.png" />
+    <Content Include="templates\simpleblack\images\mediafront_bigplay.png" />
+    <Content Include="templates\simpleblack\images\mediafront_black40.png" />
+    <Content Include="templates\simpleblack\images\mediafront_blue20.png" />
+    <Content Include="templates\simpleblack\images\mediafront_buttonaudioslidebar.png" />
+    <Content Include="templates\simpleblack\images\mediafront_buttoncontroler.png" />
+    <Content Include="templates\simpleblack\images\mediafront_buttoninfo.png" />
+    <Content Include="templates\simpleblack\images\mediafront_buttonpause.png" />
+    <Content Include="templates\simpleblack\images\mediafront_buttonplay.png" />
+    <Content Include="templates\simpleblack\images\mediafront_buttonresizescreen.png" />
+    <Content Include="templates\simpleblack\images\mediafront_buttonsound.png" />
+    <Content Include="templates\simpleblack\images\mediafront_close.png" />
+    <Content Include="templates\simpleblack\images\mediafront_controlerbarBg.png" />
+    <Content Include="templates\simpleblack\images\mediafront_forward.png" />
+    <Content Include="templates\simpleblack\images\mediafront_infobox.png" />
+    <Content Include="templates\simpleblack\images\mediafront_logo.png" />
+    <Content Include="templates\simpleblack\images\mediafront_movie640x360.png" />
+    <Content Include="templates\simpleblack\images\mediafront_moviethumb.png" />
+    <Content Include="templates\simpleblack\images\mediafront_playlistbg.png" />
+    <Content Include="templates\simpleblack\images\mediafront_playlistshadow.png" />
+    <Content Include="templates\simpleblack\images\mediafront_playlisttitlebg.png" />
+    <Content Include="templates\simpleblack\jquery.media.template.simpleblack.js" />
+    <Content Include="templates\simpleblack\simple_black_preview.png" />
+    <Content Include="Views\Library\Gone.aspx" />
+    <Content Include="Views\Library\Index.aspx" />
+    <Content Include="Views\Library\Playlist.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Music\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jquery-ui\css\swanky-purse\images\ui-bg_highlight-hard_65_fee4bd_1x100.png0000664" />
+    <None Include="js\createJS.php" />
+    <None Include="js\createJS.sh" />
+    <None Include="js\yuicompressor\.DS_Store" />
+    <None Include="templates\default\createIndex.bat" />
+    <None Include="templates\default\createIndex.sh" />
+    <None Include="templates\default\index.php" />
+    <None Include="templates\default\osmplayer_default.tpl.php" />
+    <None Include="templates\default\osmplayer_default_controlbar.tpl.php" />
+    <None Include="templates\default\osmplayer_default_hscrollbar.tpl.php" />
+    <None Include="templates\default\osmplayer_default_links.tpl.php" />
+    <None Include="templates\default\osmplayer_default_menu.tpl.php" />
+    <None Include="templates\default\osmplayer_default_node.tpl.php" />
+    <None Include="templates\default\osmplayer_default_nodevoter.tpl.php" />
+    <None Include="templates\default\osmplayer_default_pager.tpl.php" />
+    <None Include="templates\default\osmplayer_default_playlist.tpl.php" />
+    <None Include="templates\default\osmplayer_default_scrollbar.tpl.php" />
+    <None Include="templates\default\osmplayer_default_teaser.tpl.php" />
+    <None Include="templates\default\osmplayer_default_teaservoter.tpl.php" />
+    <None Include="templates\default\osmplayer_default_titlebar.tpl.php" />
+    <None Include="templates\default\template.php" />
+    <None Include="templates\shockplayer\.cvsignore" />
+    <None Include="templates\shockplayer\css\.cvsignore" />
+    <None Include="templates\shockplayer\images\.cvsignore" />
+    <None Include="templates\shockplayer\osmplayer_shockplayer.tpl.php" />
+    <None Include="templates\shockplayer\template.php" />
+    <None Include="templates\simpleblack\osmplayer_simpleblack.tpl.php" />
+    <None Include="templates\simpleblack\template.php" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51568</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
